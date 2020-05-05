@@ -2,27 +2,14 @@ import React, { Component } from 'react';
 import { order } from './../../UserFunctions';
 import jwt_decode from 'jwt-decode'
 import {
-  Badge,
   Button,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Col,
-  Collapse,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Fade,
   Form,
   FormGroup,
-  FormText,
-  FormFeedback,
   Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButtonDropdown,
-  InputGroupText,
   Label,
   Row,
 } from 'reactstrap';

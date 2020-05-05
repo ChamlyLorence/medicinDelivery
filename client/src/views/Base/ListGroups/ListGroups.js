@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row, TabContent, TabPane } from 'reactstrap';
-import jwt_decode from 'jwt-decode'
-import { getOrderDetails } from './../../UserFunctions'
+import {Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row} from 'reactstrap';
+import jwt_decode from 'jwt-decode';
+import { getOrderDetails } from './../../UserFunctions';
 
 class ListGroups extends Component {
 
@@ -18,9 +17,9 @@ constructor(props) {
   }
   
  componentDidMount() {
-    const token = localStorage.usertoken
-    const decoded = jwt_decode(token)       
-    this.state.userID= decoded._id
+    const token = localStorage.usertoken;
+    const decoded = jwt_decode(token) ;      
+    this.state.userID = decoded._id;
      getOrderDetails(this.state.userID).then(res => {
         if (res) {
         this.setState({ userOrders : res });
